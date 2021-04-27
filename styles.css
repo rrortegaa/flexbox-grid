@@ -1,3 +1,10 @@
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: #4e4e4e;
   color: white;
@@ -18,13 +25,13 @@ body {
   background-color: purple;
   grid-area: h;
   height: 10vh;
-  padding: 10px;
+  padding: 20px;
 }
 
 .aside {
   background-color: teal;
   grid-area: a;
-  padding: 10px;
+  padding: 20px;
 }
 
 .content {
@@ -34,20 +41,20 @@ body {
   grid-gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
-  padding: 10px;
+  padding: 20px;
 }
 
 .sidebar {
   background-color: turquoise;
   grid-area: s;
-  padding: 10px;
+  padding: 20px;
 }
 
 .footer {
   background-color: slateblue;
   grid-area: f;
   height: 15vh;
-  padding: 10px;
+  padding: 20px;
 }
 
 .post {
@@ -72,40 +79,47 @@ img {
 .text {
   flex: 1;
   font-size: 16px;
-  margin: 0 1rem;
 }
 
-/* @media only screen and (min-width: 601px) and (max-width: 992px) {
-/* @media only screen and (max-width: 992px) { */
-  /* .container {
-    grid-template-areas:
-    'h h'
-    'a c'
-    'a c'
-    's s'
-    'f f';
-  }
+img, .text {
+  margin: 1rem;
+}
 
-  .text {
-    margin: 0 .9rem;
-  }
-} */
-
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .container {
     grid-template-areas:
-    'h'
-    'a'
-    'c'
-    's'
-    'f';
+      'h'
+      'a'
+      'c'
+      's'
+      'f';
   }
 
   .content {
     grid-template-columns: 1fr;
+
   }
 
-  .text {
-    margin: 1rem 0;
+  .post {
+    justify-content: space-between;
+  }
+
+  img, .text {
+    margin: .7rem;
   }
 }
+
+@media (min-width: 601px) and (max-width: 992px) {
+  .container {
+    grid-template-areas:
+      'h h'
+      'a c'
+      'a c'
+      's s'
+      'f f';
+  }
+
+    img, .text {
+      margin: .9rem;
+    }
+  }
