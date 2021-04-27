@@ -2,6 +2,7 @@
 # Layout responsivo con Flexbox y Grid ✨
 
 
+
 ## Hello Koders! 🖤
 
 💬 **En este repo encontrarán un layout responsivo con algunas aplicaciones de los conceptos de flexbox y grid vistos en el workshop**
@@ -9,8 +10,10 @@
 📢 _```IMPORTANT! Si Chrome presenta algún issue, te recomiendo testear los estilos responsivos con el inspector de Firefox```_
 
 
+
 ## Iniciando 🚀
 Estas instrucciones te permitirán obtener una copia del proyecto en tu máquina local.
+
 
 ### Pre-requisitos 📋
 
