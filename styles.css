@@ -109,7 +109,7 @@ img, .text {
   }
 }
 
-@media (min-width: 601px) and (max-width: 992px) {
+/* @media (min-width: 601px) and (max-width: 992px) {
   .container {
     grid-template-areas:
       'h h'
@@ -122,4 +122,4 @@ img, .text {
     img, .text {
       margin: .9rem;
     }
-  }
+  } */
