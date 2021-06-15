@@ -14,32 +14,35 @@ body {
 .container {
   display: grid;
   grid-template-areas:
-    'h h h h'
-    'a c c s'
-    'a c c s'
-    'a c c s'
-    'f f f f';
+    "header header header header"
+    "aside content content sidebar"
+    "footer footer footer footer";
 }
 
 .header {
   background-color: purple;
-  grid-area: h;
+  grid-area: header;
   height: 10vh;
   padding: 20px;
 }
 
 .aside {
   background-color: cornflowerblue;
-  display: flex;
-  flex-direction: column;
-  grid-area: a;
+  grid-area: aside;
   padding: 20px;
+}
+
+.aside-item {
+  align-items: center;
+  display: flex;
+  margin-top: 14px;
+  width: 100%;
 }
 
 .content {
   background-color: lightpink;
   display: grid;
-  grid-area: c;
+  grid-area: content;
   grid-gap: 1.5rem;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
@@ -48,18 +51,18 @@ body {
 
 .sidebar {
   background-color: turquoise;
-  grid-area: s;
+  grid-area: sidebar;
   padding: 20px;
 }
 
 .footer {
   background-color: slateblue;
-  grid-area: f;
+  grid-area: footer;
   height: 15vh;
   padding: 20px;
 }
 
-.post {
+.card {
   background-color: snow;
   border-radius: 10px;
   box-shadow: 1px 1px 9px 1px rgb(211, 133, 145);
@@ -82,7 +85,7 @@ img {
   width: 100%;
 }
 
-.text {
+p {
   color: midnightblue;
   flex: 1;
   font-size: 14px;
@@ -91,32 +94,50 @@ img {
   width: 100%;
 }
 
-@media (max-width: 600px) {
+span {
+  color: snow;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.emoji {
+  font-size: 30px;
+  text-align: end;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightseagreen;
+  }
+
   .container {
     grid-template-areas:
-      'h'
-      'a'
-      'c'
-      's'
-      'f';
+      "header"
+      "aside"
+      "content"
+      "sidebar"
+      "footer";
   }
 
   .content {
     grid-template-columns: 1fr;
-
   }
 }
 
-@media (min-width: 601px) and (max-width: 992px) {
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  body {
+    background-color: lightskyblue;
+  }
+
   .container {
     grid-template-areas:
-      'h h'
-      'a c'
-      'a c'
-      's s'
-      'f f';
+      "header header"
+      "aside content"
+      "aside content"
+      "sidebar sidebar"
+      "footer footer";
   }
-  
+
   .content {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
@@ -126,4 +147,8 @@ img {
   .sidebar {
     display: none;
   }
+
+  /*  .hide {
+    display: none;
+  } */
 }
